@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_mapctivity_top"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorAccent" >
+        <ImageView
+            android:id="@+id/iv_mapctivity_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_left_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_mapctivity_lefttop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="环境详情"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="45dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_Information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="21dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginBottom="23dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:text="历史数据"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <!--环境信息条幅显示-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_info_fengsu"
+            android:background="@drawable/text_view_underline"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="风速："
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tv_info_jiangyu"
+            android:background="@drawable/text_view_underline"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="降雨："
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/tv_info_yanwu"
+            android:background="@drawable/text_view_underline"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="烟雾："/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_info_createDt"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/text_view_underline"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="数据采集时间为："
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:id="@+id/position_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true">
+        </com.baidu.mapapi.map.MapView>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
